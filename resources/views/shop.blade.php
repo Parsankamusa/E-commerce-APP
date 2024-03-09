@@ -484,8 +484,9 @@
                                 </a>
                             </li>
                             <li>
-                            <a href="javascript:void(0)" onclick="event.preventDefault(); addProductsToWishList({{ $product->id }}, '{{ $product->name }}', 1, {{ $product->regular_price }});">
-                                <i data-feather="heart"></i>
+                            <a href="javascript:void(0)" onclick="addProductsToWishList({{ $product->id }}, '{{ $product->name }}', 1, {{ $product->regular_price }})" class="wishlist">
+                            <i data-feather="heart"></i>
+                                <!-- onclick="event.preventDefault(); addProductsToWishList({{ $product->id }}, '{{ $product->name }}', 1, {{ $product->regular_price }});" -->
                             </a>
 
                                 </a>
@@ -614,14 +615,14 @@
                   $("#size").val($("#pagesize option:selected").val());
                   $("#frmFilter").submit(); 
             });  
-            function addProductsToWishList(event, id, name, quantity, price)
-            event.preventDefault();  
+            function addProductsToWishList(id, name, quantity, price)
+            // event.preventDefault();  
             {
     $.ajax({
         type: 'POST',
-        url: "{{route("wishlist.store")}}",
+        url: "{{route('wishlist.store')}}",
         data: {
-            "_token": "{{csrf_token()}}",
+            "_token": "{{ csrf_token() }}",
             id: id,
             name: name,
             quantity: quantity,
@@ -630,7 +631,7 @@
         success: function(data) {
             if (data.status == 200) {
                 // Assuming you have a function to show notifications
-                showNotification({
+                notify({
                     icon: "fa fa-check",
                     title: "Successful",
                     message: "Successfully added to wishlist",
@@ -639,6 +640,5 @@
         }
     });
 }
-
-        </script>
+  </script>
         @endpush

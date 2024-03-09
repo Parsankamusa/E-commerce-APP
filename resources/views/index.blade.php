@@ -4,7 +4,7 @@
 <section class="pt-0 poster-section">
         <div class="poster-image slider-for custome-arrow classic-arrow">
             <div>
-                <img src="assets/images/furniture-images/poster/1.png" class="img-fluid blur-up lazyload" alt="">
+                <img src="assets/images/furniture-images/poster/t3.jpg" class="img-fluid blur-up lazyload" alt="">
             </div>
             <div>
                 <img src="assets/images/furniture-images/poster/2.png" class="img-fluid blur-up lazyload" alt="">
@@ -44,14 +44,14 @@
         <div class="left-side-contain">
             <div class="banner-left">
                 <h4>Sale <span class="theme-color">35% Off</span></h4>
-                <h1>New Latest <span>Dresses</span></h1>
+                <h1>New Latest <span>Jackets</span></h1>
                 <p>BUY ONE GET ONE <span class="theme-color">FREE</span></p>
-                <h2>$79.00 <span class="theme-color"><del>$65.00</del></span></h2>
-                <p class="poster-details mb-0"> its simply dummy text of the printing and typesetting
-                    industry.</p>
+                <h2>$35.00 <span class="theme-color"><del>$65.00</del></span></h2>
+                <!-- <p class="poster-details mb-0"> its simply dummy text of the printing and typesetting
+                    industry.</p> -->
             </div>
         </div>
-
+<!-- 
         <div class="right-side-contain">
             <div class="social-image">
                 <h6>Facebook</h6>
@@ -64,7 +64,7 @@
             <div class="social-image">
                 <h6>Twitter</h6>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- banner section start -->
     <section class="ratio2_1 banner-style-2">
@@ -72,7 +72,7 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="collection-banner p-bottom p-center text-center">
-                        <a href="shop-left-sidebar.html" class="banner-img">
+                        <a href="{{ route('shop.index') }}" class="banner-img">
                             <img src="assets/images/fashion/banner/1.jpg" class="bg-img blur-up lazyload" alt="">
                         </a>
                         <div class="banner-detail">
@@ -81,7 +81,7 @@
                             </a>
                             <span class="font-dark-30">26% <span>OFF</span></span>
                         </div>
-                        <a href="shop-left-sidebar.html" class="contain-banner">
+                        <a href="{{ route('shop.index') }}"  class="contain-banner">
                             <div class="banner-content with-big">
                                 <h2 class="mb-2">New Hoodie</h2>
                                 <span>BUY ONE GET ONE FREE</span>
@@ -100,7 +100,7 @@
                             </a>
                             <span class="font-dark-30">50% <span>OFF</span></span>
                         </div>
-                        <a href="shop-left-sidebar.html" class="contain-banner">
+                        <a href="{{ route('shop.index') }}" class="contain-banner">
                             <div class="banner-content with-big">
                                 <h2 class="mb-2">Women Fashion</h2>
                                 <span>New offer 50% off</span>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="collection-banner p-bottom p-center text-center">
-                        <a href="shop-left-sidebar.html" class="banner-img">
+                        <a href="{{ route('shop.index') }}"  class="banner-img">
                             <img src="assets/images/fashion/banner/3.jpg" class="bg-img blur-up lazyload" alt="">
                         </a>
                         <div class="banner-detail">
@@ -119,7 +119,7 @@
                             </a>
                             <span class="font-dark-30">36% <span>OFF</span></span>
                         </div>
-                        <a href="shop-left-sidebar.html" class="contain-banner">
+                        <a href="{{ route('shop.index') }}"  class="contain-banner">
                             <div class="banner-content with-big">
                                 <h2 class="mb-2">New Jacket</h2>
                                 <span>BUY ONE GET ONE FREE</span>
@@ -983,7 +983,7 @@
                 <div class="col-xxl-10 col-lg-9">
                     <div class="category-wrapper category-slider1 white-arrow category-arrow">
                         <div>
-                            <a href="shop-left-sidebar.html" class="category-wrap category-padding">
+                            <a href="{{ route('shop.index') }}" class="category-wrap category-padding">
                                 <img src="assets/images/fashion/category/1.jpg" class="bg-img blur-up lazyload"
                                     alt="category image">
                                 <div class="category-content category-text-1">
@@ -993,7 +993,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href="shop-left-sidebar.html" class="category-wrap category-padding">
+                            <a href="{{ route('shop.index') }}" class="category-wrap category-padding">
                                 <img src="assets/images/fashion/category/2.jpg" class="bg-img blur-up lazyload"
                                     alt="category image">
                                 <div class="category-content category-text-1">
@@ -1055,12 +1055,12 @@
                                 <div class="row g-3">
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
-                                            <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/1.jpg"
+                                            <a href="{{ route('shop.index') }}">
+                                                <img src="assets/images/furniture-images/product/36.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
-                                                <a href="product/details.html">
+                                                <a href="{{ route('shop.index') }}">
                                                     <h6 class="font-light">Fully Confirtable</h6>
                                                     <h3>Latest fashions 7854</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
@@ -1086,7 +1086,7 @@
 
                                                             <li data-bs-toggle="tooltip" data-bs-placement="top"
                                                                 title="Wishlist">
-                                                                <a href="wishlist.php" class="wishlist">
+                                                                <a href="wishlist.list" class="wishlist">
                                                                     <i data-feather="heart"></i>
                                                                 </a>
                                                             </li>
@@ -1099,14 +1099,14 @@
 
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
-                                            <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/2.jpg"
+                                            <a href="{{ route('shop.index') }}">
+                                                <img src="assets/images/furniture-images/product/29.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
-                                                <a href="product/details.html">
+                                                <a href="{{ route('shop.index') }}">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest hoodies</h3>
+                                                    <h3>gym kits</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1143,12 +1143,12 @@
 
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
-                                            <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/3.jpg"
+                                            <a href="{{ route('shop.index') }}">
+                                                <img src="assets/images/furniture-images/product/33.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
-                                                <a href="product/details.html">
+                                                <a href="{{ route('shop.index') }}">
                                                     <h6 class="font-light">Fully Confirtable</h6>
                                                     <h3>latest fashions 7854</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
@@ -1187,14 +1187,14 @@
 
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
-                                            <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/4.jpg"
+                                            <a href="{{ route('shop.index') }}">
+                                                <img src="assets/images/furniture-images/product/42.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
-                                                <a href="product/details.html">
+                                                <a href="{{ route('shop.index') }}">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>new in town</h3>
+                                                    <h3>sneakers</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1245,13 +1245,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/1.jpg"
+                                                <img src="assets/images/furniture-images/product/39.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>sport shoes  7854</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1289,13 +1289,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/2.jpg"
+                                                <img src="assets/images/furniture-images/product/28.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>Latest ladies kits</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1333,13 +1333,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/3.jpg"
+                                                <img src="assets/images/furniture-images/product/38.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>Latestwomen jeans 654</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1377,13 +1377,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/4.jpg"
+                                                <img src="assets/images/furniture-images/product/42.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>Latest shoes 2854</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1434,13 +1434,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/1.jpg"
+                                                <img src="assets/images/furniture-images/product/31.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>Latest hoodies 1854</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1478,13 +1478,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/2.jpg"
+                                                <img src="assets/images/furniture-images/product/23.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>pair pants and hoodies 754</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1522,13 +1522,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/3.jpg"
+                                                <img src="assets/images/furniture-images/product/24.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>pants 4854</h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1566,13 +1566,13 @@
                                     <div class="col-lg-12 col-md-6 col-12">
                                         <div class="product-image">
                                             <a href="product/details.html">
-                                                <img src="assets/images/furniture-images/product/4.jpg"
+                                                <img src="assets/images/furniture-images/product/25.jpg"
                                                     class="blur-up lazyload" alt="">
                                             </a>
                                             <div class="product-details">
                                                 <a href="product/details.html">
                                                     <h6 class="font-light">Fully Confirtable</h6>
-                                                    <h3>Latest wood handle chair 7854</h3>
+                                                    <h3>official skirts 631 </h3>
                                                     <h4 class="font-light mt-1"><del>$49.00</del> <span
                                                             class="theme-color">$35.50</span>
                                                     </h4>
@@ -1634,7 +1634,7 @@
                     <div>
                         <div class="product-box">
                             <div class="img-wrapper">
-                                <a href="product/details.html">
+                                <a href="{{ route('shop.index') }}">
                                     <img src="assets/images/fashion/product/front/25.jpg"
                                         class="w-100 bg-img blur-up lazyload" alt="">
                                 </a>
@@ -1690,8 +1690,8 @@
                                         </div>
                                     </div>
                                     <p class="font-light mb-sm-2 mb-0">Multicolor Dress</p>
-                                    <a href="product/details.html" class="font-default">
-                                        <h5>Skater Multicolor Dress</h5>
+                                    <a href="{{ route('shop.index') }}" class="font-default">
+                                        <h5> official Dress</h5>
                                     </a>
                                 </div>
                             </div>
@@ -1757,7 +1757,7 @@
                                     </div>
                                     <p class="font-light mb-sm-2 mb-0">Multicolor Dress</p>
                                     <a href="product/details.html" class="font-default">
-                                        <h5>Skater Multicolor Dress</h5>
+                                        <h5>Multicolor Dress</h5>
                                     </a>
                                 </div>
                             </div>
@@ -1823,7 +1823,7 @@
                                     </div>
                                     <p class="font-light mb-sm-2 mb-0">Multicolor Dress</p>
                                     <a href="product/details.html" class="font-default">
-                                        <h5>Skater Multicolor Dress</h5>
+                                        <h5>official Dress</h5>
                                     </a>
                                 </div>
                             </div>
@@ -1887,9 +1887,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <p class="font-light mb-sm-2 mb-0">Multicolor Dress</p>
+                                    <p class="font-light mb-sm-2 mb-0">sport kits</p>
                                     <a href="product/details.html" class="font-default">
-                                        <h5>Skater Multicolor Dress</h5>
+                                        <h5> multicolor kits</h5>
                                     </a>
                                 </div>
                             </div>
@@ -1953,9 +1953,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <p class="font-light mb-sm-2 mb-0">Multicolor Dress</p>
+                                    <p class="font-light mb-sm-2 mb-0">gymn kits</p>
                                     <a href="product/details.html" class="font-default">
-                                        <h5>Skater Multicolor Dress</h5>
+                                        <h5>gymn kits</h5>
                                     </a>
                                 </div>
                             </div>
@@ -2085,9 +2085,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <p class="font-light mb-sm-2 mb-0">Multicolor Dress</p>
+                                    <p class="font-light mb-sm-2 mb-0">best hoodies</p>
                                     <a href="product/details.html" class="font-default">
-                                        <h5>Skater Multicolor Dress</h5>
+                                        <h5> best hoodies</h5>
                                     </a>
                                 </div>
                             </div>
@@ -2151,9 +2151,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <p class="font-light mb-sm-2 mb-0"> Dress</p>
+                                    <p class="font-light mb-sm-2 mb-0"> fashion hoodies</p>
                                     <a href="product/details.html" class="font-default">
-                                        <h5>Skater Multicolor Dress</h5>
+                                        <h5>fashion hoodies</h5>
                                     </a>
                                 </div>
                             </div>

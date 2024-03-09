@@ -25,22 +25,38 @@ Route::get('/', function () {
 
 Auth::routes();
 #app routes
+Route::get('/base', function () {
+    return view('base');
+})->name('base');
 Route::get('/',[AppController::class,'index'])->name('app.index');
 Route::get('/about-us',[AppController::class,'index'])->name('about.index');
 Route::get('/contact-us',[AppController::class,'index'])->name('contact.index');
 Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
 Route::get('/product/{slug}',[ShopController::class,'productDetails'])->name('shop.product.details');
+
+#cart urls
 Route::get('/cart',[CartController::class,'index'])->name('cart.index');
 Route::post('/cart/store', [CartController::class, 'addToCart'])->name('cart.store');
 Route::delete('/cart/remove', [CartController::class, 'removeItem'])->name('cart.remove');
 Route::post('/cart/update', [CartController::class, 'updateCart'])->name('cart.update');
 Route::delete('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
-Route::post('/wishlist/store', [App\Http\Controllers\WishlistController::class, 'store'])->name('wishlist.store');
+// Route::post('/wishlist/store', [WishlistController::class, 'store'])->name('wishlist.store');
 
+#wishlist urls
+Route::post('/wishlist/add', [WishlistController::class, 'addProductsToWishList'])->name('wishlist.store');
 Route::get('/wishlist',[WishlistController::class,'getWishlistedProducts'])->name('wishlist.list');
+Route::delete('/wishlist/remove',[WishlistController::class,'removeProductFromWishlist'])->name('wishlist.remove');
+Route::delete('/wishlist/clear',[WishlistController::class,'clearWishlist'])->name('wishlist.clear');
+Route::post('/wishlist/move-to-cart',[WishlistController::class,'moveToCart'])->name('wishlist.move.to.cart');
+
+#middleware urls
 Route::middleware('auth')->group(function(){
 Route::get('/user-account',[UserController::class,'index'])->name('user.index');
 });
 Route::middleware('auth','auth.admin')->group(function(){
-    Route::get('/admin',[UserController::class,'index'])->name('admin.index');
+    Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
+});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 });

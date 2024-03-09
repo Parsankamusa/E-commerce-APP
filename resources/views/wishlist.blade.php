@@ -92,7 +92,7 @@
                             </td>
                             <td>
                                 @if($item->model->stock_status == 'instock')
-                                    <a href="javascript:void(0)" class="icon">
+                                    <a href="javascript:void(0)" class="icon" onclick="moveToCart('{{$item->rowId}}')">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 @else
@@ -100,7 +100,7 @@
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 @endif
-                                <a href="javascript:void(0)" class="icon">
+                                <a href="javascript:void(0)" class="icon" onclick="removeFromWishlist('{{$item->rowId}}')">
                                     <i class="fas fa-times"></i>
                                 </a>
                             </td>
@@ -110,9 +110,9 @@
                 </table>
             </div>
         </div>
-        <div class="row">
+            <div class="row">
             <div class="col-md-12 text-end">
-                <a href="javascript:void(0)">Clear All Items</a>
+            <a href="javascript:void(0)" onclick="clearWishlist()">Clear All Items</a>
             </div>
         </div>
         @else
@@ -125,7 +125,48 @@
             </div>
         @endif
     </div>
+    
 </section>
 <!-- Cart Section End -->  
 
+<!-- form to delete the items from the wishlist -->
+<form id="deleteFromWishlist" action="{{route('wishlist.remove')}}" method="POST">
+    @csrf
+    @method('delete')
+    <input type="hidden" id="rowId" name="rowId" />
+</form>
+
+<!-- form to clear the items in the wishlist -->
+<form id="clearWishlist" action="{{route('wishlist.clear')}}" method="POST">
+    @csrf
+    @method('delete')
+</form>
+<!-- form to move the items to the cart -->
+<form id="moveToCart" action="{{route('wishlist.move.to.cart')}}" method="POST">
+    @csrf
+    <input type="hidden" name="rowId" id="mrowId" />
+</form>
 @endsection
+<!-- javascript scripts to remove, clear and move the items to the cart -->
+@push('scripts')
+    <script>
+        // function to remove the objects in wishlist
+        function removeFromWishlist(rowId)
+        {
+            $("#rowId").val(rowId);
+            $("#deleteFromWishlist").submit();
+        } 
+        
+        // function to clear the wishlist
+        function clearWishlist()
+        {
+            $("#clearWishlist").submit();
+        }
+        //  function to move items from wishlist to cart
+        function moveToCart(rowId)
+        {
+            $("#mrowId").val(rowId);
+            $("#moveToCart").submit();
+        }
+    </script>
+@endpush
